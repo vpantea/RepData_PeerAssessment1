@@ -60,9 +60,8 @@ NAs <- nrow(df[is.na(df$steps),])
 NAs
 ```
 
-Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean for that 5-minute interval taken for all measured days.
-
-Create a new dataset that is equal to the original dataset but with the missing data filled in.
+The strategy for filling in all of the missing values in the dataset isn't sophisticated: each missing step value is filled with the mean value for that precise 5-minute interval taken for all measured days.
+So I create a new dataset that is equal to the original dataset but with the missing data filled in cf. the described strategy:
 ```{r}
 nas <- which(is.na(df$steps))
 df.wo.nas <- df

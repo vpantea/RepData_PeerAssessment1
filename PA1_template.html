@@ -274,9 +274,8 @@ NAs
 <pre><code>## [1] 2304
 </code></pre>
 
-<p>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean for that 5-minute interval taken for all measured days.</p>
-
-<p>Create a new dataset that is equal to the original dataset but with the missing data filled in.</p>
+<p>The strategy for filling in all of the missing values in the dataset isn&#39;t sophisticated: each missing step value is filled with the mean value for that precise 5-minute interval taken for all measured days.
+So I create a new dataset that is equal to the original dataset but with the missing data filled in cf. the described strategy:</p>
 
 <pre><code class="r">nas &lt;- which(is.na(df$steps))
 df.wo.nas &lt;- df
